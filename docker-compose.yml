@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: API/Dockerfile
+    ports:
+      - "5000:8080"
+    restart: always
+
+  ui:
+    build:
+      context: .
+      dockerfile: UI/Dockerfile
+    ports:
+      - "80:80"
+    restart: always
